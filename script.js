@@ -1,5 +1,5 @@
-userName = document.getElementById('nameInput').value;
-userEmail = document.getElementById('emailInput').value;
+var userName = document.getElementById('nameInput').value;
+var userEmail = document.getElementById('emailInput').value;
 
 function buttonClick() {
 
