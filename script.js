@@ -1,13 +1,12 @@
-var userName = document.getElementById('nameInput').value;
-var userEmail = document.getElementById('emailInput').value;
+var userName = '';
+var userEmail = ''; 
+
 
 function buttonClick() {
-
+    userName =  document.getElementById('nameInput').value;
+    userEmail = document.getElementById('emailInput').value;
+    
     if (typeof newrelic == 'object') {
-        newrelic.addPageAction('Submit', {username: userName, email: userEmail});
-        alert('Data sent to New Relic - try out: SELECT * FROM PageAction WHERE actionName = \'Submit\' SINCE TODAY')
+        newrelic.addPageAction('submit', {username: userName, email: userEmail});
       }
-
-
-
 }
